@@ -2,16 +2,16 @@ body{
   padding:0;
   margin:0;
 }
-.vid-container{
+
+img {
+  width: 1920px;
+  height: 1080px;
+}
+
+.container{
   position:relative;
   height:100vh;
   overflow:hidden;
-}
-.bgvid{
-  position:absolute;
-  left:0;
-  top:0;
-  width:100vw;
 }
 .inner-container{
   width:400px;
@@ -21,22 +21,15 @@ body{
   left:calc(50vw - 200px);
   overflow:hidden;
 }
-.bgvid.inner{
-  top:calc(-50vh + 200px);
-  left:calc(-50vw + 200px);
-  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
-  -webkit-filter:blur(10px);
-  -ms-filter: blur(10px);
-  -o-filter: blur(10px);
-  filter:blur(10px);
-}
 .box{
   position:absolute;
   height:100%;
   width:100%;
-  font-family:Helvetica;
+  /* font-family:Helvetica; */
   color:#fff;
   background:rgba(0,0,0,0.13);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   padding:30px 0px;
 }
 .box h1{
@@ -68,7 +61,7 @@ body{
   cursor:pointer;
 }
 .box button:active{
-  background:#27ae60;
+  background:#1b924c;
 }
 .box p{
   font-size:14px;
@@ -77,4 +70,12 @@ body{
 .box p span{
   cursor:pointer;
   color:#666;
+  opacity: 100%;
 }
+.box p span:hover{
+  opacity: 60%;
+  cursor:pointer;
+  color:#666;
+}
+
+
